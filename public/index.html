@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>ChatterUp</title>
+  </head>
+  <body>
+    <div id="login-container">
+      <h2>Register / Login</h2>
+
+      <input type="text" id="name" placeholder="Name (for register)" />
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+
+      <!-- File input for profile pic -->
+      <input type="file" id="profilePic" accept="image/*" />
+
+      <button id="register-btn">Register</button>
+      <button id="login-btn">Login</button>
+    </div>
+
+    <div id="chat-container">
+      <div id="user-panel">
+        <h3>Online Users</h3>
+        <ul id="online-users"></ul>
+      </div>
+      <div id="chat-box">
+        <div id="messages"></div>
+        <div id="typing"></div>
+        <input
+          type="text"
+          id="message-input"
+          placeholder="Type your message..."
+        />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
